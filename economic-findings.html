@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic & Financial Ties | Project APAP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .table-fixed-layout {
+            table-layout: fixed;
+        }
+        /* Custom styles for tab navigation */
+        .tab-button {
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab-button.active {
+            background-color: #be123c; /* rose-700 */
+            color: #ffffff;
+            border-bottom-color: #be123c;
+        }
+        .tab-button:not(.active) {
+            border-bottom: 2px solid transparent;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Custom styles for accordion */
+        .accordion-header {
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .accordion-header:hover {
+            background-color: #374151; /* gray-700 */
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation Bar (Consistent with Homepage) -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-rose-600 tracking-wider">
+                Project APAP
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#mission" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Mission</a>
+                <a href="index.html#research-areas" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Research Areas</a>
+                <a href="index.html#call-to-action" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Take Action</a>
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="text-gray-300 hover:text-rose-500 transition-colors duration-300 text-xl" aria-label="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Economic & Financial Ties</h1>
+            <p class="mt-4 text-xl text-rose-400">Case Study: The Arkansas Teacher Retirement System (ATRS)</p>
+        </div>
+
+        <!-- Executive Summary Section -->
+        <section id="executive-summary" class="mb-16">
+            <div class="bg-gray-800 border border-rose-800/50 rounded-lg p-6 md:p-8 shadow-2xl">
+                <h2 class="text-3xl font-bold text-rose-500 mb-4 flex items-center"><i class="fas fa-file-invoice mr-3"></i>Executive Summary</h2>
+                <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <p>This report delivers an irrefutable indictment of the Arkansas Teacher Retirement System's (ATRS) profound and systemic financial complicity in the Israeli colonial-apartheid project. Through its vast investment portfolio, ATRS channels the deferred wages of Arkansas educators into a global network of corporations and financial instruments that directly and indirectly finance, enable, and legitimize an apartheid regime and its ongoing, flagrant violations of international law and Palestinian human rights.</p>
+                    <p>Across all major asset classes—Public Equities, Fixed Income, and the deliberately obscured Opaque Assets (Private Equity, Real Assets, Alternatives)—ATRS investments are systematically funneled through dominant asset managers such as BlackRock, Loomis Sayles, KKR, and Blackstone. These financial behemoths, in turn, direct capital into a web of companies deeply implicated in the Israeli military-industrial complex, the construction and maintenance of illegal colonial settlements, and the provision of advanced surveillance and population control technologies used to subjugate the Palestinian people.</p>
+                    <blockquote class="border-l-4 border-rose-600 pl-4 italic">ATRS's own "pecuniary factors only" investment policy... transforms ATRS from a neutral administrator of teacher pensions into an active financial underwriter of apartheid.</blockquote>
+                    <p>The pervasive opacity characterizing significant portions of ATRS's portfolio functions as a deliberate mechanism of concealment. This is not a mere administrative detail but an illegitimate veil of secrecy, shielding these financial ties from public scrutiny and democratic challenge. This report serves as a weapon for ideological struggle, providing clear, documented evidence to arm activists, ATRS members, and the public.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Visualization Section -->
+        <section id="data-visualization" class="mb-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-10">Visualizing Complicity</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-200">ATRS Target Asset Allocation (FY 2024)</h3>
+                    <p class="text-center text-sm text-gray-400 mb-4">Opaque, non-public assets comprise 32% of the portfolio, obscuring complicity.</p>
+                    <canvas id="assetAllocationChart"></canvas>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-semibold text-center mb-4 text-gray-200">Implicated Companies by Sector</h3>
+                     <p class="text-center text-sm text-gray-400 mb-4">Complicity is systemic, spanning key sectors of the global economy.</p>
+                    <canvas id="complicityBySectorChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Detailed Findings Section with Tabs -->
+        <section id="detailed-findings" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">The Architecture of Complicity: A Cross-Asset Analysis</h2>
+            
+            <!-- Tab Navigation -->
+            <div class="border-b border-gray-700 mb-6">
+                <nav class="flex justify-center -mb-px space-x-4 md:space-x-8" aria-label="Tabs">
+                    <button class="tab-button active py-4 px-1 text-center border-b-2 font-medium text-lg" data-tab="public-equities">
+                        <i class="fas fa-chart-line mr-2"></i>Public Equities
+                    </button>
+                    <button class="tab-button py-4 px-1 text-center border-b-2 font-medium text-lg" data-tab="fixed-income">
+                        <i class="fas fa-file-contract mr-2"></i>Fixed Income (Bonds)
+                    </button>
+                    <button class="tab-button py-4 px-1 text-center border-b-2 font-medium text-lg" data-tab="opaque-assets">
+                        <i class="fas fa-eye-slash mr-2"></i>Opaque Assets
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Tab Content -->
+            <div>
+                <!-- Public Equities Content -->
+                <div id="public-equities" class="tab-content active">
+                    <p class="text-gray-400 mb-6 text-lg">ATRS achieves exposure to public equities primarily through pooled funds, such as the "BlackRock MSCI ACWI IMI Fund." The reliance on such broad, market-cap-weighted index funds creates a structural pathway for complicity. "Passive" investing, in this context, transforms into passive complicity, channeling vital capital to implicated corporations.</p>
+                    <div class="overflow-x-auto bg-gray-800 rounded-lg border border-gray-700">
+                        <table class="min-w-full text-sm text-left text-gray-300 table-fixed-layout">
+                            <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 w-1/4">Company</th>
+                                    <th scope="col" class="px-6 py-3 w-1/6">Sector</th>
+                                    <th scope="col" class="px-6 py-3 w-1/2">Summary of Alleged Complicit Activity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Alphabet Inc. (GOOGL)</td>
+                                    <td class="px-6 py-4">Technology</td>
+                                    <td class="px-6 py-4">Project Nimbus (cloud/AI for Israeli military/gov), military use of Google Cloud, surveillance via Google Photos, services to Settlement Division of World Zionist Org.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Microsoft Corp. (MSFT)</td>
+                                    <td class="px-6 py-4">Technology</td>
+                                    <td class="px-6 py-4">Azure cloud/AI services to Israeli military/gov (incl. "target bank," surveillance), Project Azure, deepening ties post-Oct 7, 2023.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Amazon.com Inc. (AMZN)</td>
+                                    <td class="px-6 py-4">Technology</td>
+                                    <td class="px-6 py-4">Key partner in Project Nimbus, providing critical cloud infrastructure and services utilized by the Israeli military, particularly during its operations in Gaza.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Caterpillar Inc. (CAT)</td>
+                                    <td class="px-6 py-4">Industrials</td>
+                                    <td class="px-6 py-4">Provision of D9 armored bulldozers for demolition of Palestinian homes/infrastructure, construction of settlements and the apartheid wall.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Booking Holdings Inc. (BKNG)</td>
+                                    <td class="px-6 py-4">Consumer</td>
+                                    <td class="px-6 py-4">Subsidiary Booking.com lists rental accommodations in illegal Israeli settlements, normalizing and profiting from these illegal enterprises.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">JPMorgan Chase (JPM)</td>
+                                    <td class="px-6 py-4">Financials</td>
+                                    <td class="px-6 py-4">Identified as a key underwriter of Israeli "war bonds" since Oct 7, 2023, directly financing Israel's military operations.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">RTX Corp (Raytheon)</td>
+                                    <td class="px-6 py-4">Defense</td>
+                                    <td class="px-6 py-4">Major weapons manufacturer; supplies a vast arsenal of missiles, bombs, and components for fighter jets used by the Israeli military.</td>
+                                </tr>
+                                <tr class="bg-gray-800">
+                                    <td class="px-6 py-4 font-medium text-white">Boeing Co. (BA)</td>
+                                    <td class="px-6 py-4">Defense</td>
+                                    <td class="px-6 py-4">Manufactures critical weapon systems, including Apache helicopters, F-15 fighter jets, and GBU-39 small diameter bombs used in attacks on Palestinians.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Fixed Income Content -->
+                <div id="fixed-income" class="tab-content">
+                     <p class="text-gray-400 mb-6 text-lg">When ATRS, through managers like Loomis Sayles, purchases corporate or sovereign bonds, it is directly providing capital to the issuing entities. This financial legitimization, conferred by major U.S. public pension funds, is as crucial to the perpetuation of the colonial-apartheid system as the capital itself.</p>
+                     <div class="overflow-x-auto bg-gray-800 rounded-lg border border-gray-700">
+                        <table class="min-w-full text-sm text-left text-gray-300 table-fixed-layout">
+                            <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 w-1/4">Issuer</th>
+                                    <th scope="col" class="px-6 py-3 w-1/2">Basis for Implication</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Leviathan Bond Ltd.</td>
+                                    <td class="px-6 py-4">Finances NewMed Energy's stake in the Leviathan offshore gas field, infringing on Palestinian maritime sovereignty. Royalties directly benefit the Israeli government.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Teva Pharmaceutical</td>
+                                    <td class="px-6 py-4">Exploits the captive Palestinian market due to Israeli-imposed restrictions. Tax payments contribute to funding all Israeli state activities, including the military.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Altice France SA</td>
+                                    <td class="px-6 py-4">Israeli subsidiary, HOT Telecommunication Systems, provides services to illegal Israeli settlements throughout the West Bank and occupied Golan Heights.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Boeing Co.</td>
+                                    <td class="px-6 py-4">General corporate funding from bonds supports its manufacture of weapon systems used by the Israeli military in attacks on Palestinians.</td>
+                                </tr>
+                                <tr class="bg-gray-800">
+                                    <td class="px-6 py-4 font-medium text-white">State of Israel Bonds</td>
+                                    <td class="px-6 py-4">Directly finances the Israeli state budget, which underwrites all aspects of the occupation, military aggression, and the apartheid system.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Opaque Assets Content -->
+                <div id="opaque-assets" class="tab-content">
+                    <p class="text-gray-400 mb-6 text-lg">A substantial portion of ATRS's portfolio (32%) is allocated to opaque asset classes like Private Equity and Real Assets. The inherent lack of transparency makes these asset classes particularly high-risk channels for complicity, shielding problematic investments from public scrutiny. ATRS engages global "mega-managers" like KKR and Blackstone for these assets.</p>
+                     <div class="overflow-x-auto bg-gray-800 rounded-lg border border-gray-700">
+                        <table class="min-w-full text-sm text-left text-gray-300 table-fixed-layout">
+                            <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 w-1/4">ATRS Asset Manager</th>
+                                    <th scope="col" class="px-6 py-3 w-1/2">Nature of High Complicity Risk</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Blackstone Group</td>
+                                    <td class="px-6 py-4">Direct investment in Israeli tech with military links (e.g., Priority Software, Wiz). Explored investment in spyware firm NSO Group. Financial pledges to Israel.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">KKR</td>
+                                    <td class="px-6 py-4">Infrastructure projects serving Israeli tech/military. Facilitates settlement property market via subsidiary (Axel Springer/Yad2). Tech growth fund targets Israel.</td>
+                                </tr>
+                                <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Antin Infrastructure</td>
+                                    <td class="px-6 py-4">Engagement with UNHRC-listed complicit entities (Delek Group). High potential for infrastructure projects serving/normalizing illegal settlements.</td>
+                                </tr>
+                                 <tr class="bg-gray-800 border-b border-gray-700">
+                                    <td class="px-6 py-4 font-medium text-white">Thoma Bravo</td>
+                                    <td class="px-6 py-4">Investment in Israeli tech with dual-use potential (cybersecurity, automation) that could serve the Israeli military and settlement entities.</td>
+                                </tr>
+                                <tr class="bg-gray-800">
+                                    <td class="px-6 py-4 font-medium text-white">State Street (SSGA)</td>
+                                    <td class="px-6 py-4">Manages opaque "Collective Investment Trusts" (CITs) for ATRS, with high probability of including complicit public equities due to broad market strategies lacking robust Palestine-specific ethical screens.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Enablers Section -->
+        <section id="enablers" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">The Enablers: Policy and Politics</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-rose-500 mb-3">ATRS's "Pecuniary Factors Only" Policy</h3>
+                    <p class="text-gray-400">ATRS's investment policy, reinforced by Arkansas Act 411 of 2023, mandates a narrow, financially-driven approach. This framework provides a legal and ethical shield for maintaining investments in corporations perpetrating gross human rights violations. It institutionalizes a willful blindness to the profound human costs of investment decisions, granting a license for complicity.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-rose-500 mb-3">The Arkansas Political Context</h3>
+                    <p class="text-gray-400">The state's reactionary political ecosystem, characterized by Republican supermajorities and deep corporate influence (Walmart, Stephens Inc., Tyson Foods), actively fosters this complicity. A legislature ideologically aligned with corporate interests and a conservative foreign policy is unlikely to support any serious investigation into ATRS's investments for human rights violations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Demands Section -->
+        <section id="demands" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-10 text-center">Unanswered Questions & Strategic Demands</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Accordion for Strategic Questions -->
+                <div id="accordion-container" class="space-y-2 mb-10">
+                    <div class="accordion-item bg-gray-800 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h3 class="font-semibold text-lg text-rose-400">To the ATRS Board: How do you justify concealing over $4.6 billion in "Collective Investment Trusts"?</h3>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="p-4 text-gray-300 border-t border-gray-700">"The ATRS mission speaks of 'Accountability and Accessibility' and 'Trust and Transparency.' How do you reconcile these stated values with the fact that over $4.6 billion of Arkansas teachers' retirement funds are concealed within opaque 'Collective Investment Trusts,' including those managed by State Street Global Advisors, with no public disclosure of the specific companies being invested in?"</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item bg-gray-800 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h3 class="font-semibold text-lg text-rose-400">To the ATRS Board: How is it in the 'best interest' of teachers to fund the killing of Palestinian children?</h3>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="p-4 text-gray-300 border-t border-gray-700">"ATRS claims to act in the 'best interest of ATRS members.' Many of your members are educators deeply committed to human rights. How is it in their 'best interest' for their deferred wages to be channeled into entities directly complicit in the brutalization, dispossession, and killing of Palestinian children, families, and educators?"</p>
+                        </div>
+                    </div>
+                     <div class="accordion-item bg-gray-800 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h3 class="font-semibold text-lg text-rose-400">To Arkansas Legislators: How can you defend laws that mandate financial complicity in apartheid?</h3>
+                             <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p class="p-4 text-gray-300 border-t border-gray-700">"As elected officials entrusted with oversight of public pension funds, how can you defend legislation like Act 411 of 2023, which compels the Arkansas Teacher Retirement System to prioritize narrowly defined 'pecuniary factors' over universally recognized human rights and international law? Does this not effectively mandate Arkansas teachers' financial complicity in apartheid and potential war crimes?"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Demands List -->
+                <div class="bg-gray-800 p-8 rounded-lg border-2 border-rose-700 shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">Core Demands for Divestment</h3>
+                    <ul class="space-y-4 list-inside">
+                        <li class="flex items-start">
+                            <i class="fas fa-bullseye text-rose-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">Immediate and Full Public Disclosure:</span> Publish a complete, itemized list of ALL underlying holdings, especially within the opaque funds.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <i class="fas fa-bullseye text-rose-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">Adoption of Comprehensive Ethical Screens:</span> Implement robust, transparent criteria to exclude all investments in companies complicit in violations of Palestinian human rights.
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <i class="fas fa-bullseye text-rose-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">Time-Bound and Comprehensive Divestment:</span> Commit to a clear, publicly announced plan for the complete divestment from all identified complicit assets.
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                             <i class="fas fa-bullseye text-rose-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold">Reinvestment in Just Futures:</span> Actively seek to reinvest divested funds into ventures that promote peace, justice, and sustainable development.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer (Consistent with Homepage) -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p class="mb-2">All research and data are free to use, share, and build upon under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" class="text-rose-500 hover:underline">AGPL-3.0 License</a>.</p>
+            <p class="mb-4">
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="hover:text-white transition-colors">View Project on GitHub</a>
+            </p>
+            <p>&copy; 2025 Project APAP. Uncover the truth, document the complicity, and arm the struggle.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching logic
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tab = button.dataset.tab;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tab) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Accordion logic
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+
+            header.addEventListener('click', () => {
+                const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                // Close all accordions first for single-open behavior
+                // accordionItems.forEach(i => {
+                //     i.querySelector('.accordion-content').style.maxHeight = '0px';
+                //     i.querySelector('.accordion-icon').classList.remove('rotate-180');
+                // });
+
+                if (isOpen) {
+                    content.style.maxHeight = '0px';
+                    icon.classList.remove('rotate-180');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Chart.js data and configuration
+        document.addEventListener('DOMContentLoaded', () => {
+            // Asset Allocation Chart
+            const assetCtx = document.getElementById('assetAllocationChart').getContext('2d');
+            new Chart(assetCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Public Equities', 'Fixed Income', 'Private Equity', 'Real Assets', 'Alternatives/Opportunistic'],
+                    datasets: [{
+                        label: 'Asset Allocation',
+                        data: [43, 20, 12, 15, 5], // Example percentages
+                        backgroundColor: [
+                            'rgba(225, 29, 72, 0.7)',  // rose-600
+                            'rgba(251, 113, 133, 0.7)',// rose-400
+                            'rgba(159, 18, 57, 0.7)',  // rose-800 (Opaque)
+                            'rgba(131, 24, 67, 0.7)',  // rose-900 (Opaque)
+                            'rgba(107, 114, 128, 0.7)'// gray-500 (Opaque)
+                        ],
+                        borderColor: '#374151',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#d1d5db' // gray-300
+                            }
+                        },
+                        title: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Complicity by Sector Chart
+            const sectorCtx = document.getElementById('complicityBySectorChart').getContext('2d');
+            new Chart(sectorCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Technology', 'Defense', 'Financials', 'Industrials', 'Consumer', 'Energy'],
+                    datasets: [{
+                        label: '# of Implicated Companies',
+                        data: [8, 4, 3, 3, 2, 2], // Example counts based on report
+                        backgroundColor: 'rgba(225, 29, 72, 0.6)',
+                        borderColor: 'rgba(225, 29, 72, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { color: '#d1d5db' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        y: {
+                            ticks: { color: '#d1d5db' },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: false,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
