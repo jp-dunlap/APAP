@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project APAP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+            color: #f9fafb; /* Off-white text */
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 1)), url('https://placehold.co/1920x1080/1f2937/374151?text=Abstract+Background');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-rose-600 tracking-wider">
+                Project APAP
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#mission" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Mission</a>
+                <a href="#research-areas" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Research Areas</a>
+                <a href="#call-to-action" class="text-gray-300 hover:text-rose-500 transition-colors duration-300">Take Action</a>
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="text-gray-300 hover:text-rose-500 transition-colors duration-300 text-xl" aria-label="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <!-- Mobile Menu Button (optional) -->
+            <div class="md:hidden">
+                <button class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="mission" class="hero-section min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-down">
+                Exposing Arkansas's Complicity in the Oppression of Palestine.
+            </h1>
+            <p class="max-w-4xl mx-auto text-lg md:text-xl text-gray-300 mb-10">
+                Systematically investigating, documenting, and analyzing all economic, political, and cultural ties between Arkansas entities and the State of Israel to identify any form of complicity in the oppression of the Palestinian people.
+            </p>
+            <a href="#research-areas" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-4 px-10 rounded-lg text-lg transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-xl">
+                Explore the Connections
+            </a>
+        </div>
+    </section>
+
+    <!-- Key Research Areas Section -->
+    <section id="research-areas" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">Our Areas of Investigation</h2>
+            <p class="text-lg text-gray-400 text-center mb-16 max-w-3xl mx-auto">Project APAP's research is structured around five interconnected themes to create a comprehensive map of complicity.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card 1: Economic -->
+                <a href="economic-findings.html" class="block bg-gray-800 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600/20 p-3 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-dollar fa-2x text-rose-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Economic & Financial Ties</h3>
+                        </div>
+                        <p class="text-gray-400">Following the money trail of complicity through state investments, corporate contracts, and bilateral trade agreements.</p>
+                    </div>
+                </a>
+
+                <!-- Card 2: Political -->
+                <a href="political-findings.html" class="block bg-gray-800 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                             <div class="bg-rose-600/20 p-3 rounded-full mr-4">
+                                <i class="fas fa-landmark fa-2x text-rose-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Political & Legislative Ties</h3>
+                        </div>
+                        <p class="text-gray-400">Mapping state-sanctioned support for apartheid through anti-BDS laws, pro-Israel resolutions, and lobbying networks.</p>
+                    </div>
+                </a>
+
+                <!-- Card 3: Academic -->
+                 <a href="academic-findings.html" class="block bg-gray-800 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                             <div class="bg-rose-600/20 p-3 rounded-full mr-4">
+                                <i class="fas fa-university fa-2x text-rose-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Academic & Institutional Ties</h3>
+                        </div>
+                        <p class="text-gray-400">Uncovering complicity in higher education through university partnerships, endowment investments, and censored discourse.</p>
+                    </div>
+                </a>
+                
+                <!-- Card 4: Military -->
+                <a href="military-findings.html" class="block bg-gray-800 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600/20 p-3 rounded-full mr-4">
+                                <i class="fas fa-shield-halved fa-2x text-rose-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Military, Security & Law Enforcement</h3>
+                        </div>
+                        <p class="text-gray-400">Exposing the local-global nexus of repression, from arms production to law enforcement exchange programs.</p>
+                    </div>
+                </a>
+
+                <!-- Card 5: Cultural -->
+                 <a href="cultural-findings.html" class="block bg-gray-800 rounded-xl overflow-hidden card-hover border border-gray-700">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600/20 p-3 rounded-full mr-4">
+                                <i class="fas fa-bullhorn fa-2x text-rose-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Cultural & Ideological Ties</h3>
+                        </div>
+                        <p class="text-gray-400">Investigating how consent for apartheid is manufactured through Christian Zionism, media efforts, and propaganda.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="call-to-action" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Join the Struggle for Accountability</h2>
+            <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">Our research is a weapon for ideological struggle. Help us wield it effectively.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Amplify -->
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-700">
+                    <i class="fas fa-share-nodes fa-3x text-rose-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Amplify Our Research</h3>
+                    <p class="text-gray-400 mb-4">Share our findings on social media to break through the manufactured silence.</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+                <!-- Follow -->
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-700">
+                    <i class="fab fa-github fa-3x text-rose-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Follow the Investigation</h3>
+                    <p class="text-gray-400 mb-4">Watch our GitHub repository for real-time updates as we uncover new evidence.</p>
+                     <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                        Watch on GitHub
+                    </a>
+                </div>
+                <!-- Contribute -->
+                <div class="bg-gray-900 p-8 rounded-lg border border-gray-700">
+                    <i class="fas fa-lightbulb fa-3x text-rose-500 mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Contribute Intelligence</h3>
+                    <p class="text-gray-400 mb-4">Securely submit information or tips relevant to our investigation.</p>
+                    <a href="mailto:apap-tips@proton.me" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                        Submit a Tip
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p class="mb-2">All research and data are free to use, share, and build upon under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" class="text-rose-500 hover:underline">AGPL-3.0 License</a>.</p>
+            <p class="mb-4">
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="hover:text-white transition-colors">View Project on GitHub</a>
+            </p>
+            <p>&copy; 2025 Project APAP. Uncover the truth, document the complicity, and arm the struggle.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
