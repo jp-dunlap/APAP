@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic & Institutional Ties | Project APAP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose-invert a { color: #f472b6; }
+        .prose-invert a:hover { color: #fda4af; }
+        
+        .tab-button { transition: background-color 0.3s, color 0.3s, border-color 0.3s; }
+        .tab-button.active { background-color: #be123c; color: #ffffff; border-color: #be123c; }
+        .tab-button:not(.active) { border-bottom: 2px solid transparent; }
+        
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .accordion-header { cursor: pointer; transition: background-color 0.3s; }
+        .accordion-header:hover { background-color: #374151; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+
+        .tooltip { position: relative; display: inline-block; border-bottom: 1px dotted #fda4af; cursor: help; }
+        .tooltip .tooltip-text {
+            visibility: hidden; width: 300px; background-color: #1f2937; color: #fff; text-align: left;
+            border-radius: 6px; padding: 10px; position: absolute; z-index: 10; bottom: 125%;
+            left: 50%; margin-left: -150px; opacity: 0; transition: opacity 0.3s; font-size: 0.875rem;
+            font-weight: normal; line-height: 1.5; border: 1px solid #4b5563;
+        }
+        .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-rose-600 tracking-wider">Project APAP</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#mission" class="text-gray-300 hover:text-rose-500">Mission</a>
+                <a href="index.html#research-areas" class="text-gray-300 hover:text-rose-500">Research Areas</a>
+                <a href="index.html#call-to-action" class="text-gray-300 hover:text-rose-500">Take Action</a>
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="text-gray-300 hover:text-rose-500 text-xl" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="md:hidden"><button class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Academic & Institutional Ties</h1>
+            <p class="mt-4 text-xl text-gray-300">Case Study: The University of Arkansas System</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <section class="mb-16">
+            <div class="bg-gray-800 border border-rose-800/50 rounded-lg p-6 md:p-8 shadow-2xl">
+                <h2 class="text-3xl font-bold text-rose-500 mb-4"><i class="fas fa-book-open mr-3"></i>Report Overview & Framing</h2>
+                <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <p>This report investigates the multifaceted ways the University of Arkansas system is complicit in practices and policies constituting what numerous international human rights organizations (Amnesty International, Human Rights Watch) and legal scholars term the "Israeli apartheid project." The investigation examines financial investments, academic partnerships, adherence to state legislation, and the prevailing campus climate. Institutional complicity is defined as actions or omissions that aid, facilitate, or legitimize this system, occurring through financial, academic, and policy channels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Tabbed Interface -->
+        <section id="main-tabs" class="mb-16">
+            <div class="border-b border-gray-700 mb-6">
+                <nav class="flex flex-wrap justify-center -mb-px" aria-label="Tabs">
+                    <button class="tab-button active py-4 px-4 text-center border-b-2 font-medium text-sm md:text-base" data-tab="financial">I. Financial Entanglements</button>
+                    <button class="tab-button py-4 px-4 text-center border-b-2 font-medium text-sm md:text-base" data-tab="academic">II. Academic & Governance Complicity</button>
+                    <button class="tab-button py-4 px-4 text-center border-b-2 font-medium text-sm md:text-base" data-tab="climate">III. Campus Climate & Political Influence</button>
+                </nav>
+            </div>
+
+            <div>
+                <!-- Tab I: Financial Entanglements -->
+                <div id="financial" class="tab-content active space-y-8">
+                    <h3 class="text-2xl font-bold text-white text-center">Tracing University Funds to the Israeli Apartheid Project</h3>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">University of Arkansas Foundation: Investment Strategy</h4>
+                        <p class="text-gray-300 mb-4">The UA Foundation, with over $2 billion in assets, engages external investment managers who direct endowment funds into the global market. An analysis of the public filings of these managers reveals significant holdings in companies with documented ties to the Israeli military, surveillance apparatus, and settlement economy.</p>
+                        
+                        <div id="accordion-container" class="space-y-2">
+                            <!-- Accordion Item: Adage Capital -->
+                            <div class="accordion-item bg-gray-900/50 rounded-lg">
+                                <div class="accordion-header p-4 flex justify-between items-center">
+                                    <h5 class="font-semibold text-lg text-gray-200">Adage Capital Management ($53.9B Portfolio)</h5>
+                                    <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-700 overflow-x-auto">
+                                        <table class="min-w-full text-sm text-left text-gray-300">
+                                            <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                                <tr>
+                                                    <th class="px-4 py-2">Company</th>
+                                                    <th class="px-4 py-2">Ticker</th>
+                                                    <th class="px-4 py-2">Nature of Complicity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b border-gray-700">
+                                                    <td class="px-4 py-2">Microsoft</td>
+                                                    <td class="px-4 py-2">MSFT</td>
+                                                    <td class="px-4 py-2">Key provider of cloud/AI services to Israeli Ministry of Defense via Project Nimbus.</td>
+                                                </tr>
+                                                <tr class="border-b border-gray-700">
+                                                    <td class="px-4 py-2">Alphabet (Google)</td>
+                                                    <td class="px-4 py-2">GOOGL</td>
+                                                    <td class="px-4 py-2">Principal partner in Project Nimbus, providing cloud infrastructure to Israeli gov't & military.</td>
+                                                </tr>
+                                                <tr class="border-b border-gray-700">
+                                                    <td class="px-4 py-2">Amazon</td>
+                                                    <td class="px-4 py-2">AMZN</td>
+                                                    <td class="px-4 py-2">Key partner (AWS) in Project Nimbus, facing criticism for use by Israeli military.</td>
+                                                </tr>
+                                                <tr class="border-b border-gray-700">
+                                                    <td class="px-4 py-2">RTX Corp (Raytheon)</td>
+                                                    <td class="px-4 py-2">RTX</td>
+                                                    <td class="px-4 py-2">Premier US defense contractor and major supplier of missiles and bombs to Israel.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-4 py-2">Lockheed Martin</td>
+                                                    <td class="px-4 py-2">LMT</td>
+                                                    <td class="px-4 py-2">Leading US defense contractor; supplies Israel with F-35 fighter jets and other weaponry.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Item: Ariel Investments -->
+                            <div class="accordion-item bg-gray-900/50 rounded-lg">
+                                <div class="accordion-header p-4 flex justify-between items-center">
+                                    <h5 class="font-semibold text-lg text-gray-200">Ariel Investments ($9.3B Portfolio)</h5>
+                                    <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="p-4 border-t border-gray-700 overflow-x-auto">
+                                        <table class="min-w-full text-sm text-left text-gray-300">
+                                             <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                                <tr><th class="px-4 py-2">Company</th><th class="px-4 py-2">Ticker</th><th class="px-4 py-2">Nature of Complicity</th></tr>
+                                            </thead>
+                                            <tbody>
+                                                 <tr>
+                                                    <td class="px-4 py-2">Check Point Software</td>
+                                                    <td class="px-4 py-2">CHKP</td>
+                                                    <td class="px-4 py-2">Prominent Israeli cybersecurity firm co-founded by veterans of Israeli military intelligence Unit 8200.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">Corporate Endowments & Donor Influence</h4>
+                        <p class="text-gray-300 mb-4">Endowed chairs and major donations link the University's prestige and financial well-being to corporations whose political activities and investments often align with pro-Israel interests, creating potential conflicts of interest.</p>
+                        <div class="overflow-x-auto">
+                             <table class="min-w-full text-sm text-left text-gray-300">
+                                <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                                    <tr><th class="px-4 py-2">Corporate Sponsor</th><th class="px-4 py-2">UArk Endowed Chair</th><th class="px-4 py-2">Documented Political/Financial Ties</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="px-4 py-2">Walton Family (Walmart)</td>
+                                        <td class="px-4 py-2">S. Robson Walton Chair, Alice L. Walton Chair</td>
+                                        <td class="px-4 py-2">Walmart PAC contributes heavily to pro-Israel politicians; Walmart Foundation has donated to Magen David Adom.</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-700">
+                                        <td class="px-4 py-2">Tyson Foods</td>
+                                        <td class="px-4 py-2">John H. Tyson Chair, Tyson Chair in Food Retailing</td>
+                                        <td class="px-4 py-2">Tyson Ventures invested in Israeli company Future Meat Tech; Tyson PAC heavily funds pro-Israel Republicans.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">ConocoPhillips</td>
+                                        <td class="px-4 py-2">ConocoPhillips Chair in International Economics</td>
+                                        <td class="px-4 py-2">Past joint ventures in Israel; its PAC overwhelmingly supports pro-Israel Republican candidates.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab II: Academic & Governance -->
+                <div id="academic" class="tab-content space-y-8">
+                    <h3 class="text-2xl font-bold text-white text-center">Institutional Policies and Partnerships</h3>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">Academic Partnership: The University of Haifa</h4>
+                        <p class="text-gray-300 mb-4">The UArk system's past study abroad partnership with the University of Haifa represents a direct academic link to an institution deeply integrated with the Israeli military and security state.</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                           <li>Haifa's National Security Studies M.A. was developed in partnership with Israel's National Security College, the IDF's highest course of study.</li>
+                           <li>The IDF's Tactical Command College incorporates a Bachelor's degree from Haifa University into its training.</li>
+                           <li>The prestigious Israel National Defense College includes an M.A. from Haifa University in its program for senior military and government officials.</li>
+                        </ul>
+                        <p class="mt-4 text-gray-400 italic">This partnership lends academic legitimacy to an institution that plays a direct role in training the security forces of a state accused of apartheid, raising serious questions about the university's human rights due diligence.</p>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">The Legislative Shield: State Laws Compelling Complicity</h4>
+                        <p class="text-gray-300 mb-4">Arkansas state laws create a powerful external pressure on the University system, restricting its ethical autonomy and compelling complicity.</p>
+                         <ul class="list-disc list-inside text-gray-300 space-y-2">
+                           <li><strong class="text-white">Act 710 (Anti-BDS Law):</strong> Legally prevents the University from divesting from companies involved in the Israeli occupation if such an act is deemed a "boycott," forcing continued financial entanglement. This law was cited in the cancellation of a talk by author Nathan Thrall at UA Fayetteville in 2023.</li>
+                           <li><strong class="text-white">Act 126 (IHRA Definition):</strong> Provides a state-sanctioned tool to suppress criticism of Israeli policies by equating it with antisemitism, thereby chilling academic freedom and dissent on campus.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">Governance: Board of Trustees' Inaction</h4>
+                        <p class="text-gray-300 mb-4">A review of the UA Board of Trustees meeting minutes from 2023-2024 reveals a significant pattern: a lack of any explicit public discussion or recorded votes on divestment from companies complicit in the occupation, the ethical implications of the Haifa partnership, or the impact of Acts 710 and 126 on campus. This public silence allows potentially problematic entanglements to persist unexamined at the system's highest governance tier.</p>
+                    </div>
+                </div>
+
+                <!-- Tab III: Campus Climate -->
+                <div id="climate" class="tab-content space-y-8">
+                     <h3 class="text-2xl font-bold text-white text-center">Campus Climate and the Suppression of Dissent</h3>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">The "Palestine Exception" to Free Speech</h4>
+                        <p class="text-gray-300 mb-4">The UArk system operates within a national context of widespread suppression of speech supporting Palestinian rights. Act 126 provides a legal framework that institutionalizes this "Palestine exception" in Arkansas.</p>
+                        <p class="text-gray-300">Palestine Legal reported a 600% increase in requests for legal support between 2022 and 2024, with two-thirds of cases being campus-related. Tactics include disciplinary actions, censorship of events, and public condemnations of Palestine advocacy by university administrations.</p>
+                    </div>
+                     <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                        <h4 class="font-bold text-xl text-rose-400 mb-4">External Influence Networks</h4>
+                         <ul class="list-disc list-inside text-gray-300 space-y-3">
+                           <li><strong class="text-white">Hillel International:</strong> The national leadership of this major Jewish campus organization has strong, documented pro-Israel advocacy credentials. Its chair, Lee Dranikoff, co-founded the Brand Israel Group and helped draft the initial strategy for the Israel on Campus Coalition (ICC). This orientation can contribute to a campus climate where Palestine solidarity activism is marginalized.</li>
+                           <li><strong class="text-white"><span class="tooltip">Canary Mission<span class="tooltip-text">An anonymous, online blacklisting operation that publishes dossiers on students and academics critical of Israeli policies, aiming to damage their reputations and future employment prospects.</span></span>:</strong> This anonymous blacklisting website actively creates a climate of fear. It publishes dossiers on pro-Palestine advocates, aiming to intimidate them into silence. The existence of such sites, combined with Act 126, raises the stakes for any student or faculty member at UArk engaging in this discourse.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section id="recommendations">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-gavel mr-2"></i>Conclusion & Recommendations for Action</h2>
+             <div class="bg-gray-800 p-6 md:p-8 rounded-lg border-2 border-rose-700 shadow-xl">
+                <h3 class="text-2xl font-bold text-white mb-2">Summary of Findings</h3>
+                <p class="text-gray-300 mb-6">The University of Arkansas system's complicity is not isolated but is woven through its financial architecture, academic engagements, and policy adherence. "Business as usual," operating within the existing legal and political framework, results in de facto material and symbolic support for the Israeli state apparatus and policies widely condemned as constituting apartheid.</p>
+                <h3 class="text-2xl font-bold text-white mb-6">Recommendations for Accountability</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 text-gray-300">
+                    <div>
+                        <h4 class="font-bold text-lg text-rose-400 mb-2">1. Financial Transparency & Divestment</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Demand full public disclosure of all UA Foundation investment holdings.</li>
+                            <li>Call for immediate divestment from companies identified as complicit in human rights violations in Palestine (e.g., Microsoft, Google, RTX, Lockheed Martin).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-rose-400 mb-2">2. Legislative & Policy Reform</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Support efforts to repeal or reform Arkansas Acts 710 and 126 to protect free speech and ethical governance.</li>
+                            <li>Demand the University establish robust ethical guidelines for all academic partnerships and corporate donations, including human rights due diligence.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-rose-400 mb-2">3. Protect Academic Freedom</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Urge the UArk administration to issue a clear statement affirming the right to criticize Israeli policies and support BDS.</li>
+                            <li>Demand the University reject the weaponization of the IHRA definition to silence legitimate political speech.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-rose-400 mb-2">4. Engage University Governance</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Organize students, faculty, and alumni to present these findings directly to the Board of Trustees.</li>
+                             <li>Utilize public comment periods at Board meetings to demand accountability and action on these issues.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p class="mb-2">All research and data are free to use, share, and build upon under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" class="text-rose-500 hover:underline">AGPL-3.0 License</a>.</p>
+            <p class="mb-4"><a href="https://github.com/jp-dunlap/APAP" target="_blank" class="hover:text-white transition-colors">View Project on GitHub</a></p>
+            <p>&copy; 2025 Project APAP. Uncover the truth, document the complicity, and arm the struggle.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Main Tab switching logic
+            const mainTabContainer = document.querySelector('#main-tabs');
+            if (mainTabContainer) {
+                const tabButtons = mainTabContainer.querySelectorAll('.tab-button');
+                const tabContents = mainTabContainer.querySelectorAll('.tab-content');
+
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tab = button.dataset.tab;
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        tabContents.forEach(content => {
+                            content.classList.remove('active');
+                            if (content.id === tab) {
+                                content.classList.add('active');
+                            }
+                        });
+                    });
+                });
+            }
+
+            // Accordion logic
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.accordion-icon');
+
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                    if (isOpen) {
+                        content.style.maxHeight = '0px';
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
