@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare & Pension Complicity | Project APAP</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+        }
+        .prose-invert a { color: #f472b6; }
+        .prose-invert a:hover { color: #fda4af; }
+        .table-fixed-layout { table-layout: fixed; }
+        
+        .accordion-header { cursor: pointer; transition: background-color 0.3s; }
+        .accordion-header:hover { background-color: #374151; }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+
+        .tooltip { position: relative; display: inline-block; border-bottom: 1px dotted #fda4af; cursor: help; }
+        .tooltip .tooltip-text {
+            visibility: hidden; width: 320px; background-color: #1f2937; color: #fff; text-align: left;
+            border-radius: 6px; padding: 10px; position: absolute; z-index: 10; bottom: 125%;
+            left: 50%; margin-left: -160px; opacity: 0; transition: opacity 0.3s; font-size: 0.875rem;
+            font-weight: normal; line-height: 1.5; border: 1px solid #4b5563;
+        }
+        .tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-rose-600 tracking-wider">Project APAP</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#mission" class="text-gray-300 hover:text-rose-500">Mission</a>
+                <a href="index.html#research-areas" class="text-gray-300 hover:text-rose-500">Research Areas</a>
+                <a href="index.html#call-to-action" class="text-gray-300 hover:text-rose-500">Take Action</a>
+                <a href="https://github.com/jp-dunlap/APAP" target="_blank" class="text-gray-300 hover:text-rose-500 text-xl" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="md:hidden"><button class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-2">The Arkansas Healthcare-Apartheid Nexus</h1>
+            <p class="mt-4 text-xl text-gray-300">An analysis of the systemic entanglement of Arkansas's healthcare and pension systems with the Israeli apartheid economy.</p>
+        </div>
+
+        <!-- Executive Summary Section -->
+        <section id="summary" class="mb-16">
+            <div class="bg-gray-800 border border-rose-800/50 rounded-lg p-6 md:p-8 shadow-2xl">
+                <h2 class="text-3xl font-bold text-rose-500 mb-4 flex items-center"><i class="fas fa-file-alt mr-3"></i>Executive Summary</h2>
+                <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <p>This intelligence report presents documented evidence of the systemic entanglement of Arkansas's healthcare and pension systems with the economy of the Israeli apartheid state and its supporting military-industrial complex. The findings herein are intended to serve as an actionable weapon for targeted activist campaigns, exposing the mechanisms through which Arkansas institutions contribute to and profit from oppression.</p>
+                    <p>The central finding is that Arkansas's core healthcare and pension systems are demonstrably interwoven with the Israeli apartheid economy through multiple channels: <strong class="text-rose-400">pharmaceutical procurement</strong> from companies like Teva Pharmaceuticals that exploit the captive Palestinian market; <strong class="text-rose-400">financial investments</strong> by public and private foundations in arms manufacturers like RTX and Lockheed Martin; <strong class="text-rose-400">academic normalization</strong> through partnerships that legitimize Israeli institutions; and the <strong class="text-rose-400">human nexus</strong> of elite decision-makers who oversee this complicity.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Pharmaceutical Pipeline -->
+        <section id="pipeline" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-pills mr-2"></i>I. The Pharmaceutical Pipeline</h2>
+            <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700">
+                <h3 class="text-2xl font-bold text-rose-500 mb-4">How Arkansas Healthcare Dollars Subsidize Israeli Corporate Power</h3>
+                <p class="text-gray-300 mb-6">The flow of capital from Arkansas's healthcare sector to Israeli corporate interests, particularly Teva Pharmaceuticals, represents a significant form of complicity. Seemingly routine mechanisms of pharmaceutical procurement—state formularies, hospital purchasing, and the role of major insurance payers—reveal a systemic pipeline that channels Arkansas healthcare dollars towards an Israeli multinational implicated in the economic structures of occupation.</p>
+                <div class="overflow-x-auto bg-gray-900 rounded-lg">
+                    <table class="min-w-full text-sm text-left text-gray-300">
+                        <caption class="p-4 text-lg font-semibold text-left text-white bg-gray-800">Table 2.1: Select Teva Products on the 2025 Arkansas State Formulary</caption>
+                        <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">Drug Name (Branded/Generic)</th>
+                                <th scope="col" class="px-6 py-3">Teva Proprietary Name</th>
+                                <th scope="col" class="px-6 py-3">Formulary Tier</th>
+                                <th scope="col" class="px-6 py-3">Indication</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">AJOVY INJ</td>
+                                <td class="px-6 py-4">AJOVY®</td>
+                                <td class="px-6 py-4">2</td>
+                                <td class="px-6 py-4">Migraine prevention</td>
+                            </tr>
+                             <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">UZEDY INJ</td>
+                                <td class="px-6 py-4">UZEDY®</td>
+                                <td class="px-6 py-4">2</td>
+                                <td class="px-6 py-4">Schizophrenia</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">glatiramer inj (COPAXONE equiv)</td>
+                                <td class="px-6 py-4">COPAXONE® (originator)</td>
+                                <td class="px-6 py-4">4 (SP)</td>
+                                <td class="px-6 py-4">Multiple sclerosis</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">albuterol HFA inhaler (PROAIR equiv)</td>
+                                <td class="px-6 py-4">ProAir® HFA (auth. generic)</td>
+                                <td class="px-6 py-4">1</td>
+                                <td class="px-6 py-4">Asthma, bronchospasm</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">amphetamine/dextroamphetamine ER (ADDERALL XR equiv)</td>
+                                <td class="px-6 py-4">Adderall XR® (generic)</td>
+                                <td class="px-6 py-4">1</td>
+                                <td class="px-6 py-4">ADHD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-6 text-gray-300">Each prescription filled for these medications within plans adhering to the state formulary contributes to Teva's revenue streams. This is not incidental but a structural feature of how pharmaceutical markets are managed at the state level, embedding complicity within the healthcare system itself.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Portfolio of Complicity -->
+        <section id="portfolio" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-hand-holding-dollar mr-2"></i>II. The Portfolio of Complicity</h2>
+            <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700">
+                <h3 class="text-2xl font-bold text-rose-500 mb-4">Profiting from War & Apartheid</h3>
+                <p class="text-gray-300 mb-6">The financial arteries of Arkansas's most prominent public and private institutions are demonstrably intertwined with corporations that fuel and profit from Israeli apartheid and its military apparatus. The analysis below identifies investments held by the UAMS Foundation, the Baptist Health Foundation, and the Arkansas Teacher Retirement System (ATRS).</p>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-xl text-white mb-2">UAMS & Baptist Health Foundations</h4>
+                        <p class="text-gray-300">Analysis of large endowment investment patterns indicates a high probability of holdings in major defense contractors and other complicit corporations like RTX, Lockheed Martin, and Caterpillar within the diversified portfolios of both the UAMS Foundation and Baptist Health Foundation. Full verification requires public disclosure of their detailed investment schedules.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-xl text-white mb-2">Arkansas Teacher Retirement System (ATRS): A Deepening Complicity</h4>
+                        <p class="text-gray-300">As detailed in our primary <a href="economic-findings.html" class="text-rose-400 hover:text-rose-300 underline">Economic & Financial Ties</a> report, ATRS's ~$23 billion portfolio is heavily invested in broad market funds managed by firms like BlackRock and State Street, which are top institutional holders of nearly every major U.S. defense contractor. This structural arrangement makes ATRS a de facto investor in companies arming Israeli apartheid.</p>
+                        <p class="text-gray-300 mt-2">This investigation has uncovered further, more direct evidence of this entanglement. In addition to its broad equity holdings, ATRS has made a direct <strong class="text-rose-400">$35 million commitment to The Veritas Capital Fund IX, LP</strong>, a private equity fund explicitly specializing in companies that provide services and products to the U.S. government and its military. This commitment directly links Arkansas teachers' pensions to the heart of the U.S. military-industrial complex that enables and sustains Israeli aggression.</p>
+                    </div>
+                </div>
+                 <div class="overflow-x-auto bg-gray-900 rounded-lg mt-6">
+                    <table class="min-w-full text-sm text-left text-gray-300">
+                        <caption class="p-4 text-lg font-semibold text-left text-white bg-gray-800">Table 3.4: Preliminary Ledger of Likely Complicit Holdings</caption>
+                        <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                            <tr>
+                                <th class="px-6 py-3">Arkansas Institution</th>
+                                <th class="px-6 py-3">Likely Complicit Holding</th>
+                                <th class="px-6 py-3">Nature of Complicity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">UAMS & Baptist Health Foundations</td>
+                                <td class="px-6 py-4 font-medium text-rose-400">RTX, Lockheed Martin, etc.</td>
+                                <td class="px-6 py-4">Likely holdings in diversified endowment portfolios.</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">ATRS</td>
+                                <td class="px-6 py-4 font-medium text-rose-400">Veritas Capital Fund IX, LP</td>
+                                <td class="px-6 py-4">$35M direct commitment to a military-focused private equity fund.</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">ATRS</td>
+                                <td class="px-6 py-4 font-medium text-rose-400">Elbit Systems, Caterpillar, etc.</td>
+                                <td class="px-6 py-4">Held via large asset managers (e.g., BlackRock, State Street).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 3: Academic Normalization -->
+        <section id="academic" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-university mr-2"></i>III. The Normalization Apparatus</h2>
+             <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700">
+                <h3 class="text-2xl font-bold text-rose-500 mb-4">Masking Politics with Science</h3>
+                <p class="text-gray-300 mb-6">A more insidious form of complicity operates within Arkansas's academic spheres. Partnerships between Arkansas institutions and Israeli entities, often presented under the neutral banner of "scientific progress," serve to normalize and legitimize the Israeli apartheid state.</p>
+                 <ul class="space-y-4 list-inside text-gray-300">
+                    <li class="flex items-start">
+                        <i class="fas fa-flask text-rose-500 mt-1 mr-3"></i>
+                        <div><strong class="text-white">UAMS & Israel Cancer Research Fund (ICRF):</strong> UAMS has publicly associated with and accepted awards from the ICRF, an Israeli national fund. This lends UAMS's prestige to an Israeli state-aligned organization, whitewashing its image while ignoring the systemic oppression of Palestinian academics.</div>
+                    </li>
+                     <li class="flex items-start">
+                        <i class="fas fa-microchip text-rose-500 mt-1 mr-3"></i>
+                        <div><strong class="text-white">UA Little Rock & Salvador Technologies:</strong> A UALR startup, through a $2.2M grant from the U.S.-Israeli BIRD Foundation, partnered with an Israeli cybersecurity firm founded by veterans of the IDF's elite intelligence and cyber units. This directly links Arkansas academic innovation with the Israeli military-industrial complex.</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 4: The Human Nexus -->
+        <section id="nexus" class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-users-cog mr-2"></i>IV. The Human Nexus: The Elite Network</h2>
+             <div class="bg-gray-800 p-6 md:p-8 rounded-lg border border-gray-700">
+                <h3 class="text-2xl font-bold text-rose-500 mb-4">Mapping the Decision-Makers</h3>
+                <p class="text-gray-300 mb-6">This systemic entanglement is facilitated by a network of individuals in positions of power. A mapping of the UAMS Foundation and Baptist Health Foundation boards reveals an elite overlap with Arkansas's most influential financial institutions, corporations, and political bodies.</p>
+                <div class="overflow-x-auto bg-gray-900 rounded-lg">
+                    <table class="min-w-full text-sm text-left text-gray-300">
+                        <caption class="p-4 text-lg font-semibold text-left text-white bg-gray-800">Table 5.1: Key UAMS Foundation Board Members & Financial Ties</caption>
+                        <thead class="text-xs text-gray-300 uppercase bg-gray-700">
+                            <tr>
+                                <th class="px-6 py-3">Board Member</th>
+                                <th class="px-6 py-3">Title on Foundation Board</th>
+                                <th class="px-6 py-3">Key Financial/Corporate Affiliation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">Beau Blair</td>
+                                <td class="px-6 py-4">Chair, UAMS Foundation Fund Board</td>
+                                <td class="px-6 py-4">Formerly with <strong class="text-rose-400">Stephens Inc.</strong>; McLarty Capital Partners</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">Ted Dickey</td>
+                                <td class="px-6 py-4">Board of Trustees Member</td>
+                                <td class="px-6 py-4">Formerly with <strong class="text-rose-400">Stephens Inc.</strong>; Member, UA Board of Trustees</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">Kevin Stephenson</td>
+                                <td class="px-6 py-4">Board of Trustees Member</td>
+                                <td class="px-6 py-4">President, <strong class="text-rose-400">Walton Enterprises</strong> Investment Team</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">Archie Schaffer</td>
+                                <td class="px-6 py-4">Board Member</td>
+                                <td class="px-6 py-4">Consultant, formerly EVP Corporate Affairs, <strong class="text-rose-400">Tyson Foods, Inc.</strong></td>
+                            </tr>
+                             <tr class="border-b border-gray-700">
+                                <td class="px-6 py-4 font-medium text-white">Mark Waldrip</td>
+                                <td class="px-6 py-4">Board of Trustees Member</td>
+                                <td class="px-6 py-4">Chairman, UA Board of Trustees; Chairman, Armor Bank</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-6 text-gray-300">This concentration of individuals from Arkansas banking, investment management (Stephens Inc., Walton Enterprises), and major state industries on the UAMS Foundation's board suggests that investment strategies are heavily influenced by the perspectives of the state's financial and business elite, potentially marginalizing ethical considerations.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Actionable Intelligence -->
+        <section id="actionable-intelligence">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center"><i class="fas fa-gavel mr-2"></i>V. Actionable Intelligence & Campaign Targets</h2>
+             <div class="bg-gray-800 p-6 md:p-8 rounded-lg border-2 border-rose-700 shadow-xl">
+                <h3 class="text-2xl font-bold text-white mb-6">Dismantling the Structures of Complicity</h3>
+                <div id="accordion-container" class="space-y-4">
+                    <!-- Accordion Item: Divestment Targets -->
+                    <div class="accordion-item bg-gray-900 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h4 class="font-semibold text-lg text-rose-400"><i class="fas fa-crosshairs mr-2"></i>Divestment Target Profiles</h4>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="p-4 border-t border-gray-700 text-gray-300 space-y-3">
+                                <p><strong class="text-white">RTX Corporation (RTX):</strong> Leading U.S. defense contractor and major supplier of bombs and missiles used by Israel.</p>
+                                <p><strong class="text-white">Lockheed Martin (LMT):</strong> Key supplier of F-16 and F-35 fighter jets used in devastating bombing campaigns in Palestine.</p>
+                                <p><strong class="text-white">Elbit Systems (ESLT):</strong> Israel's largest defense firm, providing drones and surveillance tech for the occupation, marketed as "battle-tested" on Palestinians.</p>
+                                <p><strong class="text-white">Caterpillar (CAT):</strong> Its D9 armored bulldozers are notoriously used for the demolition of Palestinian homes and infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Accordion Item: Accountability Briefs -->
+                     <div class="accordion-item bg-gray-900 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h4 class="font-semibold text-lg text-rose-400"><i class="fas fa-university mr-2"></i>Institutional Accountability Briefs & Demands</h4>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="p-4 border-t border-gray-700 text-gray-300 space-y-4">
+                                <div>
+                                    <h5 class="font-bold text-white">For UAMS & Baptist Health Foundations:</h5>
+                                    <ul class="list-disc list-inside ml-4 mt-2">
+                                        <li><strong class="text-rose-400">Demand Full Transparency:</strong> Publicly disclose all investment holdings.</li>
+                                        <li><strong class="text-rose-400">Demand Ethical Procurement:</strong> Adopt policies to exclude companies like Teva that profit from apartheid.</li>
+                                        <li><strong class="text-rose-400">Demand Divestment:</strong> Immediately divest from all arms manufacturers and complicit corporations.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-white">For Arkansas Teacher Retirement System (ATRS):</h5>
+                                    <ul class="list-disc list-inside ml-4 mt-2">
+                                        <li><strong class="text-rose-400">Demand Divestment:</strong> Arkansas teachers' pensions must not profit from war crimes.</li>
+                                        <li><strong class="text-rose-400">Demand Ethical Investment Screens:</strong> Exclude companies complicit in human rights abuses.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Accordion Item: Talking Points -->
+                     <div class="accordion-item bg-gray-900 rounded-lg border border-gray-700">
+                        <div class="accordion-header p-4 flex justify-between items-center">
+                            <h4 class="font-semibold text-lg text-rose-400"><i class="fas fa-bullhorn mr-2"></i>Key Talking Points for Public Engagement</h4>
+                            <i class="fas fa-chevron-down accordion-icon transition-transform"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="p-4 border-t border-gray-700 text-gray-300">
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li>"Arkansas healthcare dollars are funding Israeli apartheid. Teva Pharmaceuticals, on our state formulary and in our hospitals, profits from the illegal occupation of Palestine."</li>
+                                    <li>"UAMS & Baptist Health: Your mission is healing, but your investments in companies like RTX and Lockheed Martin fund war. Divest from death, invest in life!"</li>
+                                    <li>"Arkansas teachers' pensions (ATRS) are invested in weapons makers arming Israeli occupation. Our educators deserve ethical retirement funds, not blood money!"</li>
+                                    <li>"UAMS partnerships with Israeli entities like ICRF and military-linked tech firms normalize apartheid under the guise of 'science.' True collaboration requires justice for Palestinians."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p class="mb-2">All research and data are free to use, share, and build upon under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" class="text-rose-500 hover:underline">AGPL-3.0 License</a>.</p>
+            <p class="mb-4"><a href="https://github.com/jp-dunlap/APAP" target="_blank" class="hover:text-white transition-colors">View Project on GitHub</a></p>
+            <p>&copy; 2025 Project APAP. Uncover the truth, document the complicity, and arm the struggle.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Accordion logic
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.accordion-icon');
+
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    if (isOpen) {
+                        content.style.maxHeight = '0px';
+                        icon.classList.remove('rotate-180');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.classList.add('rotate-180');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
